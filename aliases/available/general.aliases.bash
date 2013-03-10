@@ -5,7 +5,7 @@ about-alias 'general aliases'
 alias sl=ls
 alias ls='ls -G'        # Compact view, show colors
 alias la='ls -AF'       # Compact view, show hidden
-alias ll='ls -al'
+alias ll='ls -alh'
 alias l='ls -a'
 alias l1='ls -1'
 
@@ -14,11 +14,6 @@ alias _="sudo"
 if [ $(uname) = "Linux" ]
 then
   alias ls="ls --color=always"
-fi
-which gshuf &> /dev/null
-if [ $? -eq 1 ]
-then
-  alias shuf=gshuf
 fi
 
 alias c='clear'
@@ -30,21 +25,15 @@ alias pager="$PAGER"
 
 alias q='exit'
 
-alias irc="$IRC_CLIENT"
-
 alias rb='ruby'
-
-# Pianobar can be found here: http://github.com/PromyLOPh/pianobar/
-
-alias piano='pianobar'
 
 alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories
 alias ....='cd ../../..' # Go up two directories
-alias -- -='cd -'        # Go back
+alias -- -='cd -'        # Go back (the alias is simply -)
 
 # Shell History
-alias h='history'
+alias h='history | tail -20'
 
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]

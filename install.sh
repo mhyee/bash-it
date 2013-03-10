@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-BASH_IT="$HOME/.bash_it"
+BASH_IT="$HOME/Documents/sandbox/dotfiles/bash-it"
 
-cp $HOME/.bash_profile $HOME/.bash_profile.bak
+cp $HOME/Documents/sandbox/dotfiles/.bash_profile $HOME/Documents/sandbox/dotfiles/.bash_profile.bak
 
 echo "Your original .bash_profile has been backed up to .bash_profile.bak"
 
-cp $HOME/.bash_it/template/bash_profile.template.bash $HOME/.bash_profile
+cp $BASH_IT/template/bash_profile.template.bash $HOME/Documents/sandbox/dotfiles/.bash_profile
 
-echo "Copied the template .bash_profile into ~/.bash_profile, edit this file to customize bash-it"
+echo "Copied the template .bash_profile into dotfiles .bash_profile, edit this file to customize bash-it"
 
 while true
 do
@@ -16,7 +16,7 @@ do
   case $RESP
     in
     [yY])
-      cp $HOME/.bash_it/template/jekyllconfig.template.bash $HOME/.jekyllconfig
+      cp $BASH_IT/template/jekyllconfig.template.bash $HOME/.jekyllconfig
       echo "Copied the template .jekyllconfig into your home directory. Edit this file to customize bash-it for using the Jekyll plugins"
       break
       ;;

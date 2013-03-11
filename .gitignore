@@ -3,7 +3,6 @@
 custom/*
 !custom/example.bash
 .rvmrc
-lib/custom.bash
 plugins/custom.plugins.bash
 *.swp
 .*.un~
